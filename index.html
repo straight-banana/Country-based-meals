@@ -19,11 +19,10 @@
     </head>
         
     <body class="bg-gradient-to-r from-pink-950 to-violet-950">
-        <nav class="flex bg-gray-900 justify-center items-center h-[10vh]">
-            <input id="search" type="text" placeholder="Search for your preferred cuisine" 
-                class="flex items-center p-2 w-[50vh] h-[5vh] border bg-white rounded-l-[2.5vh]">
-            <button onclick="mealdb()" 
-                    class="flex items-center p-2 w-[5vh] h-[5vh] border bg-white rounded-r-[2.5vh] hover:bg-gray-500">🔍</button>
+        <nav class="flex justify-center items-center h-[10vh] relative">
+            <div class="bg-gradient-to-r from-violet-500 to-pink-500 blur-sm w-[55vh] h-[5vh] -z-5 absolute"></div>
+            <input id="search" type="text" placeholder="Search for your preferred cuisine" class="flex items-center p-2 w-[50vh] h-[5vh] border bg-white rounded-l-[2.5vh] z-0">
+            <button onclick="mealdb()" class="flex items-center p-2 w-[5vh] h-[5vh] border bg-white rounded-r-[2.5vh] hover:bg-gray-500 z-0">🔍</button>
         </nav>
 
         <div class="flex justify-center">
@@ -37,7 +36,7 @@
                 
             </div>
 
-            <main id="main" class="py-[5vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
+            <main id="main" class="py-[5vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] relative">
                 
             </main>
         </div>
@@ -61,7 +60,7 @@
                         
                         const part = document.createElement('a');
                         part.href = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + obj.meals[i].idMeal;
-                        part.className = "h-[350px] bg-gray-600 w-[300px] rounded-3xl grid grid-rows-2 border-2 border-solid border-white hover:scale-[1.1] transition dutaion-300";
+                        part.className = "h-[350px] w-[300px] rounded-3xl grid grid-rows-2 border-2 border-solid border-white hover:scale-[1.1] transition dutaion-300";
 
                         const image = document.createElement('img')
                         image.className = "m-[10px] h-[280px] rounded-2xl";
